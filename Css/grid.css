@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    background-color: #777;
+}
+.container {
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 100px 350px 100px; 
+}
+
+header {
+    display: flex;
+    background-color: #f6e;
+    padding: 2em 1em;
+    grid-column: span 12;
+}
+header div {
+    background-color: aliceblue;
+    padding: 1em;
+    margin:0 1em;
+
+}
+header div:nth-child(3) {
+    margin-left: auto;
+}
+aside {
+    background-color: rgb(102, 156, 255);
+    padding: 2em;
+    /* margin: 1em; */
+    grid-column: span 2;
+}
+main {
+    background-color: rgb(102, 255, 161);
+    padding: 2em;
+    /* margin: 1em; */
+    grid-column: span 10;
+
+}
+footer {
+    background-color: #e7a958;
+    padding: 2em;
+    /* margin: 1em; */
+    grid-column: span 12;
+
+}
+
+/* create grid in container below */
+.container2{
+    margin: 2em 0;
+    display:grid;
+    /* grid-template-columns:minmax(10px, 1fr)
+    minmax(10, 1fr) ; */
+    grid-template-columns:
+    1fr 1fr minmax(10px, 1fr) 3fr;
+    /* repeat(5, 1fr)  50px auto 100px 1fr; */  
+    /* grid-template-rows:120px 120px 120px 120px 120px ; */
+    grid-template-rows:
+    min-content 1fr min-content;
+    /*   100px 1fr max-content;  */
+    /* grid-gap:20px; */
+      /* e.g. 
+      1fr 1fr
+      minmax(10px, 1fr) 3fr
+      repeat(5, 1fr)
+      50px auto 100px 1fr
+  */
+
+  /* e.g. 
+      min-content 1fr min-content
+      100px 1fr max-content
+  */
+  /*
+    Grid lines 1/2/2/3: 
+    row-start/olumn-start/row-end/column-end
+  */
+
+  /* grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+  grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line]; */
+}
+.box  {
+    /* width: 90px;  */
+    /* height: 120px;  */
+    border: 1px solid red; 
+}
+
+.container3 {
+    display:grid;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 55vh 55vh;
+    grid-column-gap: 3vw;
+    grid-row-gap: 3vh;
+    grid-template-areas: "topFull topFull"
+    "bottomLeft bottomRight";
+    justify-content: center;
+    align-items: center;
+    background-color: #777;
+    border: 2px solid hsl(30, 100%, 80%);
+    width: 90vw;
+    height: 130vh;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 40vw; */
+    height: 55vh;
+    border: 2px solid red;
+}
+
+.one {
+   grid-area: topFull;
+
+}
+.two {
+    grid-area: bottomRight;
+
+}
+.three {
+    grid-area: bottomLeft;
+
+}

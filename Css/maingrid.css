@@ -1,0 +1,66 @@
+* {
+    margin:0;
+    background-color: #666;
+    color: wheat;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 13vw 20vw 20vw ;
+    grid-template-rows: 15vh 60vh 15vh;
+    /* grid-column-gap: 3vw; */
+    grid-template-areas: "h1 h1 h1 h1" "g1 g2 g2 g2" 
+    "f2 f2 f2 f2"
+    ;
+    width: 90vw;
+    height: 90vh;
+    border: 2px white solid;
+    margin:  2em auto;
+}
+.nav {
+   background-color: rgb(65, 173, 173);
+   padding: 2em;
+   grid-area: h1;
+}
+.aside {
+    background-color: brown;
+    padding: 2em;
+    grid-area: g1;
+
+}
+.content {
+    background-color: crimson;
+    padding: 2em;
+    grid-area: g2;
+
+}
+.footer {
+    background-color: rgb(67, 111, 150);
+    padding: 2em;
+    grid-area: f2;
+
+}
+
+
+#main-container {
+    background-color:#fff;
+    color: black;
+    text-align: center;
+    margin:2em 0;
+    height: 50vh;
+    width: 100%;
+}
+
+.container4 {
+   background-color: rgb(11, 11, 161);
+}
+.top {
+    background-color: aqua;
+}
+
+/* 
+why the fuck is the background of main-container not 
+white? The text inside of it is aligning in the center
+but the background color won't change. 
+*/

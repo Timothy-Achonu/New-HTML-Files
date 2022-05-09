@@ -1,0 +1,51 @@
+* {
+    margin:0;
+}
+h1 {
+    margin: 1em;
+}
+.container4 {
+   display: grid;
+   grid-template-columns: 10vw 67vw 15vw;
+   grid-template-rows: 15vh 29vh 15vh;
+   grid-template-areas: "h h h h" "m a r r" "m f f f";
+   grid-gap: 1vw;
+   background-color:hsl(200, 100%, 60%);
+   /* height: 60vh; */
+   margin: 2em 1.5vw;
+   padding: 1.5vw;
+
+   /* I set the margin and padding to 1.5vw respectively,
+   and I am expecting the contents of this container
+   to break out of the padding because they have a 
+   combined vw of 95, I think the margin and padding 
+   I added to this container would try to compress
+   the content into a box that it is bigger than.
+   But something else is happening instead- the content
+   is not breaking out and the left padding is bigger 
+   than the right padding. I am confused!
+   */
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(240, 60%, 85%);
+    font-weight: bold;
+}
+.top {
+    grid-area: h;
+}
+.left {
+    grid-area: m;
+}
+.main {
+    grid-area: a;
+}
+.right {
+    grid-area: r;
+}
+
+.bottom {
+    grid-area: f;
+}
